@@ -1,11 +1,7 @@
 package com.keagan.studentplanner.model
 
 import androidx.compose.ui.graphics.Color
-import com.keagan.studentplanner.ui.theme.PeachLight
-import com.keagan.studentplanner.ui.theme.MintLight
-import com.keagan.studentplanner.ui.theme.BlueLight
-import com.keagan.studentplanner.ui.theme.LavenderLight
-import com.keagan.studentplanner.ui.theme.LemonLight
+import com.keagan.studentplanner.ui.theme.*
 
 data class NoteUI(
     val title: String,
@@ -19,7 +15,8 @@ data class TaskUI(
     val title: String,
     val subtitle: String = "",
     var done: Boolean = false,
-    val tag: String? = null
+    val tag: String? = null,
+    val dueAtMillis: Long? = null   // ← NEW (nullable)
 )
 
 val SubjectTint: Map<String, Color> = mapOf(
